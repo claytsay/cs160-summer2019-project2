@@ -25,6 +25,8 @@
   <!-- Site-specific stuff -->
   <link rel="stylesheet" type="text/css" href="{% static 'coloring/css/paint_palette.css' %}" />
   <script type="text/javascript" src="{% static 'coloring/js/paintPalette.js' %}"></script>
+  <!-- TODO: Get this to work -->
+  <link rel="shortcut icon" type="image/ico" href="{% static 'coloring/images/paint_palette.ico' %}"/>
 
 </head>
 
@@ -42,7 +44,7 @@
         </div>
       </div>
       <div class="row">
-        <canvas id="palette-canvas" width="auto" height="auto"></canvas>
+        <canvas id="palette-canvas" resize></canvas>
       </div>
 
     </div>

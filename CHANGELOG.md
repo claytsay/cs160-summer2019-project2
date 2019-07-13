@@ -10,3 +10,7 @@ Some basic framework changes.
 - Began setting up layout of palette
   - Added very rough palette graphic
 
+## Version 0.1.1
+Some attempts at implementing things. Not really successful.
+- Attempted to set up logic of palette
+
