@@ -1,5 +1,5 @@
 // Colour mxing mechanics: https://minecraft.gamepedia.com/Dye#Dyeing_armor
-
+var choosecolors;
 window.onload = function() {
   var canvas = document.getElementById('myCanvas');
 
@@ -18,7 +18,7 @@ window.onload = function() {
     options: [],
     $container: $('#color-palette')
   }
-
+  
   // your custom interaction goes here!
   // you may replace everything
   function myCustomInteraction() {
@@ -38,7 +38,7 @@ window.onload = function() {
 
   // create a color palette with the given colors
   function createColorPalette(colors) {
-
+    
     // create a swatch for each color
     for (var i = colors.length - 1; i >= 0; i--) {
       var $swatch = $("<div>").css("background-color", colors[i])
@@ -54,13 +54,17 @@ window.onload = function() {
   // loads a set of colors from a json to create a color palette
   function getColorsCreatePalette() {
     cp.$container.html(" ");
-    $.getJSON('/static/coloring/vendors/material/material-colors.json', function(colors) {
-      var keys = Object.keys(colors);
-      for (var i = keys.length - 1; i >= 0; i--) {
-        cp.options.push(colors[keys[i]][500]);
-      }
-      createColorPalette(cp.options);
-    });
+    
+    cp.options = JSON.parse(localStorage.getItem("chosen"));
+    console.log(cp.options);
+    createColorPalette(cp.options);
+//     $.getJSON('/static/coloring/vendors/material/material-colors.json', function(colors) {
+//       var keys = Object.keys(colors);
+//       for (var i = keys.length - 1; i >= 0; i--) {
+//         cp.options.push(colors[keys[i]][500]);
+//       }
+//       createColorPalette(cp.options);
+//     });
   }
 
   function init(custom) {

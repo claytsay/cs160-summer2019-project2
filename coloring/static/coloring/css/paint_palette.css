@@ -6,3 +6,36 @@
     -ms-transform: rotate(-180deg);
     -o-transform: rotate(-180deg);
 }
+
+#color-palette {
+  padding-left: 30px;
+			width: 300px;
+			background-color: #f1f1f1;
+			display: flex;
+			flex-wrap: wrap;
+			position: absolute;
+			top: 0;
+		}
+
+.swatch {
+			width: 24px;
+			height: 24px;
+			-moz-border-radius: 12px;
+			-webkit-border-radius: 12px;
+			border-radius: 12px;
+			margin: 3px;
+		}	
+
+#palette-canvas {
+			padding-left: 0;
+		    padding-right: 0;
+		    margin-left: auto;
+		    margin-right: auto;
+		    display: block;
+  height: 300px;
+		}
+
+canvas[resize] {
+    margin-top: 100px;
+    width: 100%;
+}
