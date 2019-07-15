@@ -20,7 +20,7 @@ window.onload = function () {
     };
   
     var cp = {
-				history: ["#000000"], // black selected by default
+				history: ["#ffffff"], // black selected by default
 				options: [],
 				$container: $('#color-palette')
 			};
@@ -28,7 +28,7 @@ window.onload = function () {
     var chosen = [];
   
     startcolor = function() {
-      localStorage.setItem("chosen", JSON.stringify(chosen));
+    localStorage.setItem("chosen", JSON.stringify(chosen));
     }
     
     function createColorPalette(colors){
